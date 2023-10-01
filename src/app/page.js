@@ -1,12 +1,49 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import Button from "./components/ui/button";
+import Link from "next/link";
+import Work from "./components/work";
+import Button from "./components/button";
 
 export default function Home() {
+  const work = [
+    {
+      title: "Ember Finance",
+      description:
+        "A dApp which provides liquidity to new tokens on the Ethereum chain",
+      image: "/ember.png",
+      website: "https://ember.finance",
+      reverse: false,
+    },
+    {
+      title: "Phantazm",
+      description:
+        "A leading decentralized lending application on the zkEVM chain",
+      image: "/phantazm.png",
+      website: "https://app.phantazm.com",
+      reverse: true,
+    },
+    {
+      title: "Blurt",
+      description:
+        "Powering blockchain technology to create a seamless social platform to send and receive money",
+      image: "/blurt.png",
+      website: "https://ethglobal.com/showcase/power-push-5y93i",
+      reverse: false,
+    },
+    {
+      title: "MktSuite",
+      description:
+        "A developing range of everyday tools for traders across all markets",
+      image: "/mktsuite.png",
+      website: "https://mktclock.com",
+      reverse: true,
+    },
+  ];
+
   return (
-    <div className="w-screen flex flex-col gap-24">
+    <div className="max-w-screen flex flex-col gap-24">
       <div className="h-screen flex flex-col items-center justify-between">
         <div className="invisible md:visible flex justify-end pt-6 px-9 gap-9 w-full">
           <button>Contact</button>
@@ -43,6 +80,50 @@ export default function Home() {
             />
           </svg>
           <p>Down</p>
+        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row gap-8 px-8 md:gap-16 md:px-16 justify-center">
+        <div className="flex flex-col gap-2 w-full lg:w-1/2">
+          <h3 className="text-2xl md:text-4xl font-medium text-accent">
+            ABOUT
+          </h3>
+          <p>
+            “config.json” is a pro&shy;duct of bran&shy;ding
+            cre&shy;a&shy;ti&shy;vi&shy;ty. It’s a sim&shy;ple and
+            me&shy;mo&shy;rable name, yet com&shy;plex at its core. The
+            pie&shy;ces on this port&shy;fo&shy;lio aren’t any different.
+          </p>
+        </div>
+        <div className="flex flex-col gap-2 w-full lg:w-1/2">
+          <h3 className="text-2xl md:text-4xl font-medium text-accent">
+            SERVICES
+          </h3>
+          <p>
+            From your busi&shy;ness idea, to a usable de&shy;sign and code.
+            Bran&shy;ding, wire&shy;fra&shy;ming and most of your fron&shy;tend
+            de&shy;ve&shy;lop&shy;ment needs are in&shy;clu&shy;ded.
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col gap-12 items-center px-16">
+        <h2 className="text-purple text-6xl font-semibold">Work</h2>
+        {work.map((item) => (
+          <Work
+            title={item.title}
+            description={item.description}
+            image={item.image}
+            website={item.website}
+            reverse={item.reverse}
+          />
+        ))}
+      </div>
+      <div className="flex flex-col gap-4 px-6 pb-8 items-center">
+        <h4 className="text-2xl font-bold">
+          config<span className="text-accent">.json</span>
+        </h4>
+        <div className="flex gap-8">
+          <Link href={""}>Contact</Link>
+          <Link href={"/work"}>Work</Link>
         </div>
       </div>
     </div>
