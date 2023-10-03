@@ -1,0 +1,59 @@
+[
+  {
+    "name": "ember-finance",
+    "title": "Ember Finance",
+    "website": "https://ember.finance",
+    "tags": ["Brand Design", "UI/UX", "TailwindCSS", "React"],
+    "text": [
+      {
+        "title": "The Challenge",
+        "paragraphs": [
+          "The Ember team embarked on a mission to revamp the process of token creation, while introducing an innovative feature: Liquidity as a Service (LaaS). It aimed to provide users with the ability to get liquidity for newly created tokens, all within a simplified and highly customizable user experience. The goal was clear: streamline the token creation process."
+        ]
+      },
+      {
+        "title": "The Solution",
+        "paragraphs": [
+          "To achieve this goal of simplicity, I started by designing a user flow centered around a token creation function, and by a user-friendly landing page. Although our primary focus was on creating a familiar user experience, we experimented with innovative designs too.",
+          "For our color scheme, we went with vibrant tones of orange and yellow, in order to represent what the Ember logo actually was. On the other hand, our UX design choices were based on studying other successful dApps —I conducted evaluations and added improvements to ensure that users could effortlessly navigate our platform.",
+          "On the frontend, we chose Tailwind for its scalability, and React. Overall, the decision-making process was collaborative: I also had to expose different alternatives to address the same issue.",
+          "With the foundational elements in place, I shifted my focus towards refining the user interface, while the rest of the team dedicated their efforts to building the needed smart contracts required for LaaS and other functionalities."
+        ]
+      },
+      {
+        "title": "Conclusion",
+        "paragraphs": [
+          "Ember has now become a more stable product, transitioning into a maintenance phase. While the path presented its challenges, we've always prioritized simplicity."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "phantazm",
+    "title": "Phantazm",
+    "website": "https://app.phantazm.com",
+    "tags": ["UI/UX", "TailwindCSS", "TypeScript", "NextJS"],
+    "text": [
+      {
+        "title": "The Challenge",
+        "paragraphs": [
+          "Many lending plaforms in the crypto space already exist, but none on zkEVM — a chain built on Polygon. And since the main selling point of Phantazm is the fact it has no chain competitors, the focus on the UI/UX was directed towards maximum familiarity, while correcting and putting together other pieces from peer dApps."
+        ]
+      },
+      {
+        "title": "The Solution",
+        "paragraphs": [
+          "The logo and brand colors were already made by the team’s graphic designer, leaving little for me to contribute in that regard. I didn’t have to do much creative work either: the initial version didn’t even have a landing page. That way, I had more time to think about how forms and other key elements should be displayed so it could all come together.",
+          "After having a user dashboard page, and another one to list all the lending markets fully designed and prototyped, it was time to move onto coding. For our tech stack, the team unanimously decided on Next.js, coupled with TypeScript and Tailwind. At the time, TS was new to me, so I got to experiment a good part of its core features.",
+          "Upon completing the development of all necessary state management, integration of charts using apex-charts, and other essential features, the only piece left was pulling real data from Subgraph (in which I was involved on the sidelines)"
+        ]
+      },
+      {
+        "title": "Conclusion",
+        "paragraphs": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        ]
+      }
+    ]
+  }
+]

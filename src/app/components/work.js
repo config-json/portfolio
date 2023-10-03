@@ -1,7 +1,14 @@
 import Button from "./button";
 import Image from "next/image";
 
-export default function Work({ title, description, reverse, image, website }) {
+export default function Work({
+  title,
+  description,
+  reverse,
+  image,
+  website,
+  more,
+}) {
   return (
     <div
       className={`${
@@ -22,7 +29,9 @@ export default function Work({ title, description, reverse, image, website }) {
           <p>{description}</p>
         </div>
         <div className="flex gap-6">
-          <Button accent={true}>More</Button>
+          <Button accent={true} link={true} href={more}>
+            More
+          </Button>
           <Button link={true} href={website}>
             Website
           </Button>

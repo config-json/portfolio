@@ -1,22 +1,22 @@
-"use client";
-
 import React from "react";
-import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
 import Work from "./components/work";
 import Button from "./components/button";
+import CustomTypewriter from "./components/typewriter";
 
 export default function Home() {
   const work = [
     {
+      name: "ember-finance",
       title: "Ember Finance",
       description:
         "A dApp which provides liquidity to new tokens on the Ethereum chain",
-      image: "/ember.png",
+      image: "/ember-finance.png",
       website: "https://ember.finance",
       reverse: false,
     },
     {
+      name: "phantazm",
       title: "Phantazm",
       description:
         "A leading decentralized lending application on the zkEVM chain",
@@ -25,6 +25,7 @@ export default function Home() {
       reverse: true,
     },
     {
+      name: "blurt",
       title: "Blurt",
       description:
         "Powering blockchain technology to create a seamless social platform to send and receive money",
@@ -33,6 +34,7 @@ export default function Home() {
       reverse: false,
     },
     {
+      name: "mktsuite",
       title: "MktSuite",
       description:
         "A developing range of everyday tools for traders across all markets",
@@ -45,20 +47,14 @@ export default function Home() {
   return (
     <div className="max-w-screen flex flex-col gap-24">
       <div className="h-screen flex flex-col items-center justify-between">
-        <div className="invisible md:visible flex justify-end pt-6 px-9 gap-9 w-full">
-          <button>Contact</button>
-          <Button>Work</Button>
+        <div className="invisible md:visible flex justify-end items-center pt-6 px-9 gap-9 w-full">
+          <Link href={"/links"}>Links</Link>
+          <Button link={true} href={"/work"}>
+            Work
+          </Button>
         </div>
         <div className="flex flex-col gap-6 md  :gap-12 items-center">
-          <h1 className="font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-            <Typewriter
-              words={["config"]}
-              loop={1}
-              typeSpeed={150}
-              delaySpeed={5000}
-            />
-            <span className="text-accent">.json</span>
-          </h1>
+          <CustomTypewriter />
           <h4 className="sm:text-xl lg:text-2xl text-center">
             const [ideas, setIdeas] = useState("code")
           </h4>
@@ -114,6 +110,7 @@ export default function Home() {
             image={item.image}
             website={item.website}
             reverse={item.reverse}
+            more={`/work/${item.name}`}
           />
         ))}
       </div>
