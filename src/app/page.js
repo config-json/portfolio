@@ -79,7 +79,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-8 px-8 md:gap-16 md:px-16 justify-center">
-        <div className="flex flex-col gap-2 w-full lg:w-1/2">
+        <div className="flex flex-col gap-2 w-full lg:w-1/2 max-w-3xl">
           <h3 className="text-2xl md:text-4xl font-medium text-accent">
             ABOUT
           </h3>
@@ -90,7 +90,7 @@ export default function Home() {
             pie&shy;ces on this port&shy;fo&shy;lio aren’t any different.
           </p>
         </div>
-        <div className="flex flex-col gap-2 w-full lg:w-1/2">
+        <div className="flex flex-col gap-2 w-full lg:w-1/2 max-w-3xl">
           <h3 className="text-2xl md:text-4xl font-medium text-accent">
             SERVICES
           </h3>
@@ -101,7 +101,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-12 items-center px-16">
+      <div className="flex flex-col gap-12 items-center px-8 md:px-16">
         <h2 className="text-purple text-6xl font-semibold">Work</h2>
         {work.map((item) => (
           <Work
@@ -119,7 +119,7 @@ export default function Home() {
           config<span className="text-accent">.json</span>
         </h4>
         <div className="flex gap-8">
-          <Link href={""}>Contact</Link>
+          <Link href={"/links"}>Links</Link>
           <Link href={"/work"}>Work</Link>
         </div>
       </div>

@@ -25,7 +25,7 @@ export default function Work({
       />
       <div className="flex flex-col gap-6 p-6">
         <div className="flex flex-col gap-2">
-          <h4 className="sm:text-xl lg:text-2xl">{title}</h4>
+          <h4 className="text-2xl">{title}</h4>
           <p>{description}</p>
         </div>
         <div className="flex gap-6">
