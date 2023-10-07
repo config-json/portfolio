@@ -79,7 +79,7 @@ export default function Links() {
           <p>@config.json</p>
         </Link>
         <Link
-          href={"https://twitter.com/config_json"}
+          href={"https://youtube.com/@config_json"}
           className="w-full max-w-lg flex gap-4 justify-center border-2 rounded-md px-6 py-3 fill-white hover:fill-background hover:text-background hover:bg-white transition duration-300"
         >
           <svg
