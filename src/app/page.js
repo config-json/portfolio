@@ -10,7 +10,7 @@ export default function Home() {
       name: "ember-finance",
       title: "Ember Finance",
       description:
-        "A dApp which provides liquidity to new tokens on the Ethereum chain",
+        "A dApp that offers liquidity support to recently new tokens on the Ethereum chain",
       image: "/ember-finance.png",
       website: "https://ember.finance",
       reverse: false,
@@ -19,7 +19,7 @@ export default function Home() {
       name: "phantazm",
       title: "Phantazm",
       description:
-        "A leading decentralized lending application on the zkEVM chain",
+        "A prominent decentralized lending platform operating on an L2 built on Polygon, zkEVM",
       image: "/phantazm.png",
       website: "https://app.phantazm.com",
       reverse: true,
@@ -28,7 +28,7 @@ export default function Home() {
       name: "blurt",
       title: "Blurt",
       description:
-        "Powering blockchain technology to create a seamless social platform to send and receive money",
+        "A social platform to send and receive money seamlessly on the blockchain",
       image: "/blurt.png",
       website: "https://ethglobal.com/showcase/power-push-5y93i",
       reverse: false,

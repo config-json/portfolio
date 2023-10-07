@@ -45,13 +45,69 @@
         "paragraphs": [
           "The logo and brand colors were already made by the team’s graphic designer, leaving little for me to contribute in that regard. I didn’t have to do much creative work either: the initial version didn’t even have a landing page. That way, I had more time to think about how forms and other key elements should be displayed so it could all come together.",
           "After having a user dashboard page, and another one to list all the lending markets fully designed and prototyped, it was time to move onto coding. For our tech stack, the team unanimously decided on Next.js, coupled with TypeScript and Tailwind. At the time, TS was new to me, so I got to experiment a good part of its core features.",
-          "Upon completing the development of all necessary state management, integration of charts using apex-charts, and other essential features, the only piece left was pulling real data from Subgraph (in which I was involved on the sidelines)"
+          "Upon completing the development of all necessary state management, integration of charts using apex-charts, and other essential features, the only piece left was pulling real data from Subgraph (in which I was involved on the sidelines)."
         ]
       },
       {
         "title": "Conclusion",
         "paragraphs": [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "Phantazm is currently close to being launched on testnets, while the backend developers do their best to finish integrating my work. "
+        ]
+      }
+    ]
+  },
+  {
+    "name": "blurt",
+    "title": "Powerpush/Blurt",
+    "website": "https://ethglobal.com/showcase/power-push-5y93i",
+    "tags": ["Brand Design", "UI/UX", "TailwindCSS", "React"],
+    "text": [
+      {
+        "title": "The Challenge",
+        "paragraphs": [
+          "Blurt, originally named PowerPush, is a result of a hackathon entry (organized by ETHGlobal, Scaling Ethereum 2023). From all the partner dApps giving away prize pools, my team chose Push.org —a chat service that can be used between wallets —and planned to build on top of it an entire social experience."
+        ]
+      },
+      {
+        "title": "The Solution",
+        "paragraphs": [
+          "This social experience would first include a feature to send and receive money between the wallets starting a chat —similar to Apple Pay in iMessage, for instance. Later on, it would also include group chats, designed for DAOs, and a global feed.",
+          "I was highly focused on the design, but at the same time we only had two weeks to work on our MVP. To give a better image of the product I was centered on the more aesthetic part: mockups (and slides).",
+          "This gave me issues related to resposivity and ability to fit everything in mobile sizes. Anyway, by the time we had to present our project, we had most of the MVP finished, while the issues on my end were irrelevant for that time."
+        ]
+      },
+      {
+        "title": "Conclusion",
+        "paragraphs": [
+          "We got pool prizes for both Push and Across, and more information about the project (specifically about features and architecture) can be found at the project’s website. At the moment, we’re planning to receive more funding from Push."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "mktsuite",
+    "title": "MktSuite",
+    "website": "https://mktclock.com",
+    "tags": ["Brand Design", "UI/UX", "TailwindCSS", "React"],
+    "text": [
+      {
+        "title": "The Challenge",
+        "paragraphs": [
+          "MktSuite is being built on the principle of seeking for tools for traders around all markets — especially in the field of aggregating different types of information from multiple sources. Most of the already existing services either have a poor UI/UX, or are rather unknown."
+        ]
+      },
+      {
+        "title": "The Solution",
+        "paragraphs": [
+          "When asking around for user needs, I got a quite interesting reply, that I personally hadn’t seen anywhere: a page that shows statuses of stock exchanges around the world and their open time converted to user local time. Since it was a simple concept, I decided to make the entire thing open-source.",
+          "The design process was straightforward —I was aiming for maximum minimalism in order to let the user access the information as soon as they visited the website— although I still had to make sure everything else was in balance.",
+          "I went for the frontend architecture I was already comfortable with: React and Tailwind. There were no significant blockers, but a handful of edge cases to take into account. "
+        ]
+      },
+      {
+        "title": "Conclusion",
+        "paragraphs": [
+          "But launching MktClock was not the end of the story: there are still many gaps to fill, and there will be more additions in the following months to shape this project and give it this “suite” form."
         ]
       }
     ]

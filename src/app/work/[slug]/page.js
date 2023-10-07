@@ -31,7 +31,7 @@ export default function CurrentWork() {
 
   return (
     <>
-      <div className="flex items-center justify-center w-full">
+      <div className="flex flex-col items-center justify-center w-full">
         <div className="flex flex-col gap-16 py-8 md:py-16 pb-20 md:pb-28 px-8 md:px-16 max-w-7xl">
           <div className="w-full">
             <Image

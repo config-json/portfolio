@@ -21,7 +21,7 @@ export default function Work({
         height={1024}
         className={`${
           reverse ? "sm:border-l-2" : "sm:border-r-2"
-        } h-full w-full sm:max-h-[205px] sm:max-w-[205px] `}
+        } h-full w-full sm:h-[229px] lg:h-[205px] max-w-fit `}
       />
       <div className="flex flex-col gap-6 p-6">
         <div className="flex flex-col gap-2">
