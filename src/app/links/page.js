@@ -80,6 +80,7 @@ export default function Links() {
         </Link>
         <Link
           href={"https://youtube.com/@config_json"}
+          target="_blank"
           className="w-full max-w-lg flex gap-4 justify-center border-2 rounded-md px-6 py-3 fill-white hover:fill-background hover:text-background hover:bg-white transition duration-300"
         >
           <svg
