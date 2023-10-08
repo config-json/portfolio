@@ -10,7 +10,7 @@ export default function Home() {
       name: "ember-finance",
       title: "Ember Finance",
       description:
-        "A dApp that offers liquidity support to recently new tokens on the Ethereum chain",
+        "A dApp that offers liquidity support to new tokens on the Ethereum chain",
       image: "/ember-finance.png",
       website: "https://ember.finance",
       reverse: false,

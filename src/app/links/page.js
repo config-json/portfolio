@@ -6,9 +6,9 @@ export default function Links() {
   return (
     <div className="flex flex-col h-screen">
       <div className="flex justify-between items-center pt-6 px-9">
-        <h4 className="hidden sm:block text-2xl font-bold">
+        <Link href="/" className="hidden sm:block text-2xl font-bold">
           config<span className="text-accent">.json</span>
-        </h4>
+        </Link>
         <div className="text-sm md:text-base flex justify-end items-center gap-9 w-full">
           <Link href={"/links"}>Links</Link>
           <Button link={true} href={"/work"}>
