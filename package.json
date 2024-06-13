@@ -21,6 +21,7 @@
     "@types/react": "^18.3.3",
     "autoprefixer": "latest",
     "postcss": "latest",
+    "prettier": "^3.3.2",
     "tailwindcss": "latest",
     "typescript": "^5.4.5"
   }

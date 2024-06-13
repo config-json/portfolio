@@ -1,5 +1,15 @@
 import Button from "@/components/Button";
 import Image from "next/image";
+import Link from "next/link";
+
+type Props = {
+  title: string;
+  description: string;
+  reverse: boolean;
+  image: string;
+  website: string;
+  more: string;
+};
 
 export default function Work({
   title,
@@ -8,7 +18,7 @@ export default function Work({
   image,
   website,
   more,
-}) {
+}: Props) {
   return (
     <div
       className={`${
@@ -22,6 +32,7 @@ export default function Work({
         className={`${
           reverse ? "sm:border-l-2" : "sm:border-r-2"
         } h-full w-full sm:h-[229px] lg:h-[205px] max-w-fit `}
+        alt={title}
       />
       <div className="flex flex-col gap-6 p-6">
         <div className="flex flex-col gap-2">
@@ -29,12 +40,12 @@ export default function Work({
           <p>{description}</p>
         </div>
         <div className="flex gap-6">
-          <Button accent={true} link={true} href={more}>
-            More
-          </Button>
-          <Button link={true} href={website}>
-            Website
-          </Button>
+          <Link href={more} target="_blank">
+            <Button accent={true}>More</Button>
+          </Link>
+          <Link href={website} target="_blank">
+            <Button>Website</Button>
+          </Link>
         </div>
       </div>
     </div>

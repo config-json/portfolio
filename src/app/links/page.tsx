@@ -11,9 +11,9 @@ export default function Links() {
         </Link>
         <div className="text-sm md:text-base flex justify-end items-center gap-9 w-full">
           <Link href={"/links"}>Links</Link>
-          <Button link={true} href={"/work"}>
-            Work
-          </Button>
+          <Link href={"/work"} target="_blank">
+            <Button>Work</Button>
+          </Link>
         </div>
       </div>
       <div className="w-full h-full flex flex-col gap-6 px-6 items-center justify-center">

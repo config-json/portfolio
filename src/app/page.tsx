@@ -49,9 +49,9 @@ export default function Home() {
       <div className="h-screen flex flex-col items-center justify-between">
         <div className="invisible md:visible flex justify-end items-center pt-6 px-9 gap-9 w-full">
           <Link href={"/links"}>Links</Link>
-          <Button link={true} href={"/work"}>
-            Work
-          </Button>
+          <Link href={"/work"} target="_blank">
+            <Button>Work</Button>
+          </Link>
         </div>
         <div className="flex flex-col gap-6 md  :gap-12 items-center">
           <CustomTypewriter />

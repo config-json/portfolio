@@ -2,32 +2,22 @@
 
 import React, { useState, useEffect } from "react";
 import { redirect, useParams } from "next/navigation";
-import work from "/src/app/data/work.json";
+import work from "@/data/work.json";
 import Image from "next/image";
 import Link from "next/link";
+import cn from "@/utils/cn";
 
 export default function CurrentWork() {
   const params = useParams();
-  const [data, setData] = useState();
 
-  useEffect(() => {
-    try {
-      setData(work);
-    } catch (error) {
-      console.log("Error parsing JSON data: ", error);
-    }
-  }, []);
-
-  const slugData = data?.find((index) => index.name === params.slug);
-  const slugIndex = data?.findIndex((item) => item.name === params.slug);
-
-  console.log(typeof slugData?.website);
+  const slugData = work.find((index) => index.name === params.slug);
+  const slugIndex = work.findIndex((item) => item.name === params.slug);
 
   useEffect(() => {
     if (slugIndex === -1) {
       redirect("/work");
     }
-  });
+  }, []);
 
   return (
     <>
@@ -77,30 +67,26 @@ export default function CurrentWork() {
           Website
         </Link>
         <Link
-          className={`${
-            Array.isArray(data) && slugIndex === 0
+          className={cn(
+            slugIndex === 0
               ? "bg-[#2A2E3B]"
-              : "bg-disabledAccent hover:bg-white hover:text-background transition duration-300"
-          } w-1/3 py-3 text-center`}
-          href={
-            Array.isArray(data) && slugIndex > 0
-              ? `/work/${data[slugIndex - 1].name}`
-              : ""
-          }
+              : "bg-disabledAccent hover:bg-white hover:text-background transition duration-300",
+            "w-1/3 py-3 text-center",
+          )}
+          href={slugIndex > 0 ? `/work/${work[slugIndex - 1].name}` : ""}
         >
           {"< Previous"}
         </Link>
         <Link
-          className={`${
-            Array.isArray(data) && data.length - 1 === slugIndex
+          className={cn(
+            slugIndex === work.length - 1
               ? "bg-[#2A2E3B]"
-              : "bg-disabledAccent hover:bg-white hover:text-background transition duration-300"
-          } w-1/3 py-3 text-center`}
+              : "bg-disabledAccent hover:bg-white hover:text-background transition duration-300",
+            "w-1/3 py-3 text-center",
+          )}
           href={
-            Array.isArray(data) &&
-            slugIndex !== -1 &&
-            data.length > slugIndex + 1
-              ? `/work/${data[slugIndex + 1].name}`
+            work.length > slugIndex + 1
+              ? `/work/${work[slugIndex + 1].name}`
               : ""
           }
         >

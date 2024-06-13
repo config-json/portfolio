@@ -8,7 +8,11 @@ export const metadata = {
   description: "const ideas = “UI/UX design”;",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body className={firaCode.className}>{children}</body>
