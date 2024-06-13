@@ -39,19 +39,19 @@ export default function CurrentWork() {
               </h1>
               <div className="flex flex-wrap gap-3 md:gap-6">
                 {slugData?.tags.map((item) => (
-                  <div className="h-min py-1 px-3 bg-purple rounded-md text-xs sm:text-sm md:text-base">
+                  <div key={item} className="h-min py-1 px-3 bg-purple rounded-md text-xs sm:text-sm md:text-base">
                     {item}
                   </div>
                 ))}
               </div>
             </div>
-            {slugData?.text.map((item) => (
-              <div className="flex flex-col gap-8 md:gap-6">
+            {slugData?.text.map((item, index) => (
+              <div key={index} className="flex flex-col gap-8 md:gap-6">
                 <h2 className="text-xl md:text-2xl font-medium">
                   {item.title}
                 </h2>
-                {item.paragraphs.map((paragraph) => (
-                  <p className="line-height">{paragraph}</p>
+                {item.paragraphs.map((paragraph, index) => (
+                  <p key={index} className="line-height">{paragraph}</p>
                 ))}
               </div>
             ))}

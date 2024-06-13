@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
+import work from "@/data/work.json";
 
-// TODO: change the default
 export default function Trade() {
-  redirect("/work/ember-finance");
+  redirect(`/work/${work[0].name}`);
 }
