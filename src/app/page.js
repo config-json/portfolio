@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import Work from "./components/work";
-import Button from "./components/button";
-import CustomTypewriter from "./components/typewriter";
+import Work from "@/components/Work";
+import Button from "@/components/Button";
+import CustomTypewriter from "@/components/Typewriter";
 
 export default function Home() {
   const work = [

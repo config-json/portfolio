@@ -1,14 +1,5 @@
-"use client";
-
-import { useParams, redirect } from "next/navigation";
-import work from "../data/work.json";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Works() {
-  const slug = useParams();
-
-  if (slug.type === undefined) {
-    redirect("/work/ember-finance");
-  }
-
-  return null;
+  redirect("/work/ember-finance");
 }
