@@ -11,8 +11,8 @@ export default function Button({ children, onClick, accent }: Props) {
     <button
       onClick={onClick}
       className={cn(
-        accent ? "bg-accent" : "border-2",
-        "py-1.5 px-3 hover:bg-white hover:text-background rounded-sm transition duration-300",
+        accent ? "bg-accent border-accent hover:border-white" : "border-white",
+        "border-2 py-1.5 px-3 hover:bg-white hover:text-background rounded-sm transition duration-300",
       )}
     >
       {children}

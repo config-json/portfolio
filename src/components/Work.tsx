@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import cn from "@/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,17 +22,19 @@ export default function Work({
 }: Props) {
   return (
     <div
-      className={`${
-        reverse ? "sm:flex-row-reverse" : "sm:flex-row"
-      } flex flex-col w-full max-w-3xl border-2`}
+      className={cn(
+        "flex flex-col w-full max-w-3xl border-2",
+        reverse ? "sm:flex-row-reverse" : "sm:flex-row",
+      )}
     >
       <Image
         src={image}
         width={1024}
         height={1024}
-        className={`${
-          reverse ? "sm:border-l-2" : "sm:border-r-2"
-        } h-full w-full sm:h-[229px] lg:h-[205px] max-w-fit `}
+        className={cn(
+          reverse ? "sm:border-l-2" : "sm:border-r-2",
+          "h-full w-full sm:h-[229px] lg:h-[205px] max-w-fit",
+        )}
         alt={title}
       />
       <div className="flex flex-col gap-6 p-6">

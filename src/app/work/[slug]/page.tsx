@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { redirect, useParams } from "next/navigation";
 import work from "@/data/work.json";
 import Image from "next/image";
@@ -17,7 +17,7 @@ export default function CurrentWork() {
     if (slugIndex === -1) {
       redirect("/work");
     }
-  }, []);
+  }, [slugIndex]);
 
   return (
     <>
@@ -39,7 +39,10 @@ export default function CurrentWork() {
               </h1>
               <div className="flex flex-wrap gap-3 md:gap-6">
                 {slugData?.tags.map((item) => (
-                  <div key={item} className="h-min py-1 px-3 bg-purple rounded-md text-xs sm:text-sm md:text-base">
+                  <div
+                    key={item}
+                    className="h-min py-1 px-3 bg-purple rounded-md text-xs sm:text-sm md:text-base"
+                  >
                     {item}
                   </div>
                 ))}
@@ -51,7 +54,9 @@ export default function CurrentWork() {
                   {item.title}
                 </h2>
                 {item.paragraphs.map((paragraph, index) => (
-                  <p key={index} className="line-height">{paragraph}</p>
+                  <p key={index} className="line-height">
+                    {paragraph}
+                  </p>
                 ))}
               </div>
             ))}

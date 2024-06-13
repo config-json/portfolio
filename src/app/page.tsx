@@ -3,6 +3,9 @@ import Link from "next/link";
 import Work from "@/components/Work";
 import Button from "@/components/Button";
 import CustomTypewriter from "@/components/Typewriter";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
+import Image from "next/image";
 
 export default function Home() {
   const work = [
@@ -11,7 +14,6 @@ export default function Home() {
       title: "Ember Finance",
       description:
         "A dApp that offers liquidity support to new tokens on the Ethereum chain",
-      image: "/ember-finance.png",
       website: "https://ember.finance",
       reverse: false,
     },
@@ -20,7 +22,6 @@ export default function Home() {
       title: "Phantazm",
       description:
         "A prominent decentralized lending platform operating on an L2 built on Polygon, zkEVM",
-      image: "/phantazm.png",
       website: "https://app.phantazm.com",
       reverse: true,
     },
@@ -29,7 +30,6 @@ export default function Home() {
       title: "Blurt",
       description:
         "A social platform to send and receive money seamlessly on the blockchain",
-      image: "/blurt.png",
       website: "https://ethglobal.com/showcase/power-push-5y93i",
       reverse: false,
     },
@@ -38,7 +38,6 @@ export default function Home() {
       title: "MktSuite",
       description:
         "A developing range of everyday tools for traders across all markets",
-      image: "/mktsuite.png",
       website: "https://mktclock.com",
       reverse: true,
     },
@@ -47,34 +46,16 @@ export default function Home() {
   return (
     <div className="max-w-screen flex flex-col gap-24">
       <div className="h-screen flex flex-col items-center justify-between">
-        <div className="invisible md:visible flex justify-end items-center pt-6 px-9 gap-9 w-full">
-          <Link href={"/links"}>Links</Link>
-          <Link href={"/work"} target="_blank">
-            <Button>Work</Button>
-          </Link>
-        </div>
+        <Nav />
         <div className="flex flex-col gap-6 md  :gap-12 items-center">
           <CustomTypewriter />
           <h4 className="sm:text-xl lg:text-2xl text-center">
-            const [ideas, setIdeas] = useState("code")
+            {`const [ideas, setIdeas] = useState("code")`}
           </h4>
         </div>
         <div className="w-full flex gap-3 pb-6 justify-center">
           <p>Scroll</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="24"
-            viewBox="0 0 25 24"
-            fill="none"
-          >
-            <path
-              d="M12.5 7V12M12.5 21C9.18629 21 6.5 18.3137 6.5 15V9C6.5 5.68629 9.18629 3 12.5 3C15.8137 3 18.5 5.68629 18.5 9V15C18.5 18.3137 15.8137 21 12.5 21Z"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <Image src="/icons/down.svg" width={24} height={24} alt="down" />
           <p>Down</p>
         </div>
       </div>
@@ -103,26 +84,19 @@ export default function Home() {
       </div>
       <div className="flex flex-col gap-12 items-center px-8 md:px-16">
         <h2 className="text-purple text-6xl font-semibold">Work</h2>
-        {work.map((item) => (
+        {work.map((item, index) => (
           <Work
+            key={index}
             title={item.title}
             description={item.description}
-            image={item.image}
+            image={`/${item.name}.png`}
             website={item.website}
             reverse={item.reverse}
             more={`/work/${item.name}`}
           />
         ))}
       </div>
-      <div className="flex flex-col gap-4 px-6 pb-8 items-center">
-        <h4 className="text-2xl font-bold">
-          config<span className="text-accent">.json</span>
-        </h4>
-        <div className="flex gap-8">
-          <Link href={"/links"}>Links</Link>
-          <Link href={"/work"}>Work</Link>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }
