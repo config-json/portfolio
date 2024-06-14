@@ -16,8 +16,6 @@ export default function Home() {
   const workRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-  console.log(hash)
-
     if (hash === "#work") {
       workRef.current?.scrollIntoView({ behavior: "smooth" })
     }
@@ -29,8 +27,16 @@ export default function Home() {
         <Nav />
         <div className="flex flex-col gap-6 md  :gap-12 items-center">
           <CustomTypewriter />
-          <h4 className="sm:text-xl lg:text-2xl text-center">
-            {`const [ideas, setIdeas] = useState("code")`}
+          <h4 className="sm:text-xl lg:text-2xl text-center px-8 py-4 bg-contrast rounded-md">
+            <span className="text-purple">{`const [`}</span>
+            <span className="text-red">{`ideas`}</span>
+            <span>{`,`}</span>{" "}
+            <span className="text-red">{`setIdeas`}</span>
+            <span className="text-purple">{`] = `}</span>
+            <span className="text-accent">{`useState`}</span>
+            <span className="text-purple">{`(`}</span>
+            <span className="text-green">{`"code"`}</span>
+            <span className="text-purple">{`)`}</span>
           </h4>
         </div>
         <div className="w-full flex gap-3 pb-6 justify-center">
