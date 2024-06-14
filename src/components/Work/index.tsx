@@ -51,9 +51,9 @@ export default function Work({
             <p>{description}</p>
           </div>
           <div className="flex gap-6">
-            <Button accent={true} onClick={() => setIsMore(!isMore)}>More</Button>
+            <Button background={isMore ? "white" : "accent"} onClick={() => setIsMore(!isMore)}>More</Button>
             <Link href={website} target="_blank">
-              <Button>Website</Button>
+              <Button background="stroke">Website</Button>
             </Link>
           </div>
         </div>

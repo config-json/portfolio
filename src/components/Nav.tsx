@@ -19,7 +19,7 @@ export default function Nav() {
           Links
         </Link>
         <Link href={"/#work"}>
-          <Button>Work</Button>
+          <Button background="stroke">Work</Button>
         </Link>
       </div>
     </div>

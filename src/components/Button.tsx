@@ -3,16 +3,26 @@ import cn from "@/utils/cn";
 type Props = {
   children: React.ReactNode;
   onClick?: () => void;
-  accent?: boolean;
+  background: "white" | "accent" | "stroke";
 };
 
-export default function Button({ children, onClick, accent }: Props) {
+export default function Button({ children, onClick, background }: Props) {
+  
+  const classes = {
+    common: "transition duration-300 rounded-sm border-2 py-1.5 px-3 hover:bg-white hover:text-background hover:border-white",
+    backgrounds: {
+      white: "bg-white text-background border-white hover:opacity-70",
+      accent: "bg-accent text-white border-accent",
+      stroke: "border-white text-white"
+    }
+  }
+
   return (
     <button
       onClick={onClick}
       className={cn(
-        accent ? "bg-accent border-accent hover:border-white" : "border-white",
-        "border-2 py-1.5 px-3 hover:bg-white hover:text-background rounded-sm transition duration-300",
+        classes.common,
+        classes.backgrounds[background]
       )}
     >
       {children}
