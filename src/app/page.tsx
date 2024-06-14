@@ -30,7 +30,7 @@ export default function Home() {
           <h4 className="sm:text-xl lg:text-2xl text-center px-8 py-4 bg-contrast rounded-md">
             <span className="text-purple">{`const [`}</span>
             <span className="text-red">{`ideas`}</span>
-            <span>{`,`}</span>{" "}
+            <span>{`, `}</span>
             <span className="text-red">{`setIdeas`}</span>
             <span className="text-purple">{`] = `}</span>
             <span className="text-accent">{`useState`}</span>
@@ -46,25 +46,15 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-8 px-8 md:gap-16 md:px-16 justify-center">
-        <div className="flex flex-col gap-2 w-full lg:w-1/2 max-w-3xl">
+        <div className="flex flex-col gap-2 w-full lg:w-1/2 max-w-3xl items-center">
           <h3 className="text-2xl md:text-4xl font-medium text-accent">
             ABOUT
           </h3>
-          <p>
+          <p className="text-center">
             “config.json” is a pro&shy;duct of bran&shy;ding
             cre&shy;a&shy;ti&shy;vi&shy;ty. It’s a sim&shy;ple and
             me&shy;mo&shy;rable name, yet com&shy;plex at its core. The
             pie&shy;ces on this port&shy;fo&shy;lio aren’t any different.
-          </p>
-        </div>
-        <div className="flex flex-col gap-2 w-full lg:w-1/2 max-w-3xl">
-          <h3 className="text-2xl md:text-4xl font-medium text-accent">
-            SERVICES
-          </h3>
-          <p>
-            From your busi&shy;ness idea, to a usable de&shy;sign and code.
-            Bran&shy;ding, wire&shy;fra&shy;ming and most of your fron&shy;tend
-            de&shy;ve&shy;lop&shy;ment needs are in&shy;clu&shy;ded.
           </p>
         </div>
       </div>
