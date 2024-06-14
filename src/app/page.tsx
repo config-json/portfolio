@@ -1,47 +1,27 @@
-import React from "react";
-import Link from "next/link";
+"use client"
+
+import React, { useEffect, useRef } from "react";
 import Work from "@/components/Work";
-import Button from "@/components/Button";
+import work from "@/data/work.json";
 import CustomTypewriter from "@/components/Typewriter";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import Image from "next/image";
+import useHash from "@/hooks/useHash";
 
 export default function Home() {
-  const work = [
-    {
-      name: "ember-finance",
-      title: "Ember Finance",
-      description:
-        "A dApp that offers liquidity support to new tokens on the Ethereum chain",
-      website: "https://ember.finance",
-      reverse: false,
-    },
-    {
-      name: "phantazm",
-      title: "Phantazm",
-      description:
-        "A prominent decentralized lending platform operating on an L2 built on Polygon, zkEVM",
-      website: "https://app.phantazm.com",
-      reverse: true,
-    },
-    {
-      name: "blurt",
-      title: "Blurt",
-      description:
-        "A social platform to send and receive money seamlessly on the blockchain",
-      website: "https://ethglobal.com/showcase/power-push-5y93i",
-      reverse: false,
-    },
-    {
-      name: "mktsuite",
-      title: "MktSuite",
-      description:
-        "A developing range of everyday tools for traders across all markets",
-      website: "https://mktclock.com",
-      reverse: true,
-    },
-  ];
+  const _works = work.map(item => item.name)
+  
+  const hash = useHash()
+  const workRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+  console.log(hash)
+
+    if (hash === "#work") {
+      workRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [hash])
 
   return (
     <div className="max-w-screen flex flex-col gap-24">
@@ -83,16 +63,12 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col gap-12 items-center px-8 md:px-16">
-        <h2 className="text-purple text-6xl font-semibold">Work</h2>
-        {work.map((item, index) => (
+        <h2 ref={workRef} className="text-purple text-6xl font-semibold">Work</h2>
+        {_works.map((item, index) => (
           <Work
             key={index}
-            title={item.title}
-            description={item.description}
-            image={`/${item.name}.png`}
-            website={item.website}
-            reverse={item.reverse}
-            more={`/work/${item.name}`}
+            reverse={index % 2 !== 0}
+            name={item}
           />
         ))}
       </div>

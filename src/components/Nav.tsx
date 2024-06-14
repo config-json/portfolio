@@ -18,7 +18,7 @@ export default function Nav() {
         >
           Links
         </Link>
-        <Link href={"/work"} target="_blank">
+        <Link href={"/#work"}>
           <Button>Work</Button>
         </Link>
       </div>

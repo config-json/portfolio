@@ -8,7 +8,7 @@ export default function Footer() {
       </h4>
       <div className="flex gap-8">
         <Link href={"/links"}>Links</Link>
-        <Link href={"/work"}>Work</Link>
+        <Link href={"/#work"}>Work</Link>
       </div>
     </div>
   );
