@@ -41,7 +41,7 @@ export default function More({ name }: Props) {
         {tags.map((item) => (
           <div
             key={item}
-            className="h-min py-1 px-3 bg-purple rounded-md text-xs sm:text-sm md:text-base"
+            className="h-min py-1 px-3 bg-accent/30 rounded-md text-xs sm:text-sm md:text-base"
           >
             {item}
           </div>
