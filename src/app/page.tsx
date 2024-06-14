@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useRef } from "react";
 import Work from "@/components/Work";
@@ -10,16 +10,16 @@ import Image from "next/image";
 import useHash from "@/hooks/useHash";
 
 export default function Home() {
-  const _works = work.map(item => item.name)
-  
-  const hash = useHash()
-  const workRef = useRef<HTMLDivElement>(null)
+  const _works = work.map((item) => item.name);
+
+  const hash = useHash();
+  const workRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (hash === "#work") {
-      workRef.current?.scrollIntoView({ behavior: "smooth" })
+      workRef.current?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [hash])
+  }, [hash]);
 
   return (
     <div className="max-w-screen flex flex-col gap-24">
@@ -50,7 +50,7 @@ export default function Home() {
           <h3 className="text-2xl md:text-4xl font-medium text-accent">
             ABOUT
           </h3>
-          <p className="text-center">
+          <p className="">
             “config.json” is a pro&shy;duct of bran&shy;ding
             cre&shy;a&shy;ti&shy;vi&shy;ty. It’s a sim&shy;ple and
             me&shy;mo&shy;rable name, yet com&shy;plex at its core. The
@@ -59,13 +59,11 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col gap-12 items-center px-8 md:px-16">
-        <h2 ref={workRef} className="text-purple text-6xl font-semibold">Work</h2>
+        <h2 ref={workRef} className="text-purple text-6xl font-semibold">
+          Work
+        </h2>
         {_works.map((item, index) => (
-          <Work
-            key={index}
-            reverse={index % 2 !== 0}
-            name={item}
-          />
+          <Work key={index} reverse={index % 2 !== 0} name={item} />
         ))}
       </div>
       <Footer />

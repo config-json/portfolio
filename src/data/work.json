@@ -1,13 +1,5 @@
 [
   {
-    "name": "ember-finance",
-    "title": "Ember Finance",
-    "description": "A dApp that offers liquidity support to new tokens on the Ethereum chain",
-    "website": "https://ember.finance",
-    "tags": ["Brand Design", "UI/UX", "TailwindCSS", "React"],
-    "text": ["", "", ""]
-  },
-  {
     "name": "cyberdex",
     "title": "CyberDEX",
     "description": "Liquid futures trading on Optimism, powered by Synthetix",
@@ -16,7 +8,7 @@
     "text": [
       "Designed a UI that resembles as much as possible the UX on a centralized exchange",
       "Wrote code to implement the trading experience, accommodating Synthetix’s smart contracts",
-      "Oversaw and reviewed the tasks of other developers in the team"
+      "Oversaw and reviewed the tasks of other developers in the team, reviewed and refactored code"
     ]
   },
   {
@@ -25,7 +17,10 @@
     "description": "A social platform to send and receive money seamlessly on the blockchain",
     "website": "https://ethglobal.com/showcase/power-push-5y93i",
     "tags": ["Brand Design", "UI/UX", "TailwindCSS", "React"],
-    "text": ["", "", ""]
+    "text": [
+      "Designed a chatting interface to allow sending and receiving crypto",
+      "Used the Push SDK to enable communication between wallet addresses"
+    ]
   },
   {
     "name": "mktsuite",
@@ -33,6 +28,8 @@
     "description": "A developing range of everyday tools for traders across all markets",
     "website": "https://mktclock.com",
     "tags": ["Brand Design", "UI/UX", "TailwindCSS", "React"],
-    "text": ["", "", ""]
+    "text": [
+      "Built a simple app that displays the status of major financial markets"
+    ]
   }
 ]

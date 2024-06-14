@@ -7,7 +7,7 @@ export default function Medium() {
       viewBox="0 0 20 20"
       fill="currentColor"
     >
-      <g clip-path="url(#clip0_1036_48)">
+      <g clipPath="url(#clip0_1036_48)">
         <path
           d="M20 9.85653C20 12.506 19.556 14.6551 19.0081 14.6551C18.4602 14.6551 18.0164 12.5065 18.0164 9.85653C18.0164 7.20652 18.4604 5.05798 19.0081 5.05798C19.5558 5.05798 20 7.20633 20 9.85653Z"
           fill="inherit"

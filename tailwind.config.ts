@@ -14,7 +14,7 @@ module.exports = {
         disabledAccent: "#394355",
         purple: "#BF94E3",
         red: "#EC6477",
-        green: "#BCD78F"
+        green: "#BCD78F",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

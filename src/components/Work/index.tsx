@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Button from "@/components/Button";
 import cn from "@/utils/cn";
@@ -13,16 +13,12 @@ type Props = {
   reverse: boolean;
 };
 
-export default function Work({
-  reverse,
-  name,
-}: Props) {
-
+export default function Work({ reverse, name }: Props) {
   const [isMore, setIsMore] = useState(false);
   const _work = work.find((item) => item.name === name);
 
   if (!_work) {
-    return
+    return;
   }
 
   const { title, description, website } = _work;
@@ -51,7 +47,12 @@ export default function Work({
             <p>{description}</p>
           </div>
           <div className="flex gap-6">
-            <Button background={isMore ? "white" : "accent"} onClick={() => setIsMore(!isMore)}>More</Button>
+            <Button
+              background={isMore ? "white" : "accent"}
+              onClick={() => setIsMore(!isMore)}
+            >
+              More
+            </Button>
             <Link href={website} target="_blank">
               <Button background="stroke">Website</Button>
             </Link>

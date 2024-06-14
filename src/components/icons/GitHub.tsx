@@ -7,7 +7,7 @@ export default function GitHub() {
       viewBox="0 0 20 20"
       fill="inherit"
     >
-      <g clip-path="url(#clip0_1217_4)">
+      <g clipPath="url(#clip0_1217_4)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
