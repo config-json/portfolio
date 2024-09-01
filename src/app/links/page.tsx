@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Twitter from "@/components/icons/Twitter";
-import Medium from "@/components/icons/Medium";
-import YouTube from "@/components/icons/YouTube";
 import GitHub from "@/components/icons/GitHub";
 
 const SOCIALS = [
@@ -11,18 +9,6 @@ const SOCIALS = [
     name: "Twitter",
     icon: <Twitter />,
     link: "https://twitter.com/config_json",
-    tag: "@config_json",
-  },
-  {
-    name: "Medium",
-    icon: <Medium />,
-    link: "https://medium.com/@config.json",
-    tag: "@config.json",
-  },
-  {
-    name: "YouTube",
-    icon: <YouTube />,
-    link: "https://youtube.com/@config_json",
     tag: "@config_json",
   },
   {
