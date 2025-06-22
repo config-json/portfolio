@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-contrast: #252835;
+  --color-background: #2A2D3D;
+  --color-accent: #739BB6;
+  --color-purple: #BF94E3;
+  --color-red: #EC6477;
+  --color-green: #BCD78F;
+}
 
 :root {
   --foreground-rgb: 255, 255, 255;

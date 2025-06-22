@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Work from "@/components/Work";
 import work from "@/data/work.json";
 import CustomTypewriter from "@/components/Typewriter";
@@ -25,7 +25,7 @@ export default function Home() {
     <div className="max-w-screen flex flex-col gap-24">
       <div className="h-screen flex flex-col items-center justify-between">
         <Nav />
-        <div className="flex flex-col gap-6 md  :gap-12 items-center">
+        <div className="flex flex-col gap-6 items-center">
           <CustomTypewriter />
           <h4 className="sm:text-xl lg:text-2xl text-center px-8 py-4 bg-contrast rounded-md">
             <span className="text-purple">{`const [`}</span>
@@ -45,7 +45,7 @@ export default function Home() {
           <p>Down</p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-8 px-8 md:gap-16 md:px-16 justify-center">
+      <div className="flex flex-col lg:flex-row gap-8 px-8 md:gap-16 md:px-16 justify-center items-center">
         <div className="flex flex-col gap-2 w-full lg:w-1/2 max-w-3xl items-center">
           <h3 className="text-2xl md:text-4xl font-medium text-accent">
             ABOUT

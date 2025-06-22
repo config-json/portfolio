@@ -1,7 +1,6 @@
 "use client";
 
 import { Typewriter } from "react-simple-typewriter";
-import React from "react";
 
 export default function CustomTypewriter() {
   return (
