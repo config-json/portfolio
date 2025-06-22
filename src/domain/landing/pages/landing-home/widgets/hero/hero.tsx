@@ -1,6 +1,6 @@
 import { Header } from "@/domain/core/components/header"
 import { Typewriter } from "./typewriter"
-import { Icon } from "@/components/icon"
+import { Icon } from "@/domain/core/components/icon"
 
 export const Hero = () => {
     return (

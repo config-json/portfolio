@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Header } from "@/domain/core/components/header";
-import { Icon } from "@/components/icon";
+import { Icon } from "@/domain/core/components/icon";
 
 const SOCIALS = [
   {

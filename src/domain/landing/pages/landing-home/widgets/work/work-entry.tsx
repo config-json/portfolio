@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/button";
+import { Button } from "@/domain/core/components/button";
 import { cn } from "@/domain/core/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
