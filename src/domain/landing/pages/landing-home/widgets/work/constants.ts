@@ -32,4 +32,12 @@ export const WORKS: Work[] = [
       'Used the Push SDK to enable communication between wallet addresses',
     ],
   },
+  {
+    name: 'mktsuite',
+    title: 'MktSuite',
+    description: 'A developing range of everyday tools for traders across all markets',
+    website: 'https://mktclock.com',
+    tags: ['Brand Design', 'UI/UX', 'TailwindCSS', 'React'],
+    text: ['Built a simple app that displays the status of major financial markets'],
+  },
 ]
