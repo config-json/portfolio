@@ -1,19 +1,19 @@
 "use client";
 
-import Button from "@/components/Button";
-import { cn } from "@/utils/cn";
+import { Button } from "@/components/button";
+import { cn } from "@/domain/core/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, useState } from "react";
 import { More } from "./more";
-import { Work } from "@/data/work";
+import { Work } from "./constants";
 
-type WorkProps = {
+type WorkEntryProps = {
   work: Work
   reverse: boolean;
 };
 
-export const WorkEntry: FC<WorkProps> = ({ work, reverse }) => {
+export const WorkEntry: FC<WorkEntryProps> = ({ work, reverse }) => {
   const [isMore, setIsMore] = useState(false);
 
   return (

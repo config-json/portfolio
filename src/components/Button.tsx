@@ -1,12 +1,12 @@
-import { cn } from "@/utils/cn";
+import { cn } from "@/domain/core/utils/cn";
+import { FC, PropsWithChildren } from "react";
 
-type Props = {
-  children: React.ReactNode;
+type ButtonProps = PropsWithChildren & {
   onClick?: () => void;
   background: "white" | "accent" | "stroke";
-};
+}
 
-export default function Button({ children, onClick, background }: Props) {
+export const Button: FC<ButtonProps> = ({ children, onClick, background }) => {
   const classes = {
     common:
       "transition duration-300 rounded-sm border-2 py-1.5 px-3 hover:bg-white hover:text-background hover:border-white",

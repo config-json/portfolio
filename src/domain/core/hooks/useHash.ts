@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const getHash = () =>
   typeof window !== "undefined" ? window.location.hash : undefined;
 
-const useHash = () => {
+export const useHash = () => {
   const [isClient, setIsClient] = useState(false);
   const [hash, setHash] = useState(getHash());
   const params = useParams();
@@ -18,5 +18,3 @@ const useHash = () => {
 
   return isClient ? hash : null;
 };
-
-export default useHash;

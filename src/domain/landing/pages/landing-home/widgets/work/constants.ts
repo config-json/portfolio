@@ -1,4 +1,3 @@
-
 export type Work = {
     name: string;
     title: string
@@ -8,7 +7,7 @@ export type Work = {
     text: string[]
 }
 
-export const WORKS = [
+export const WORKS: Work[] = [
   {
     name: "cyberdex",
     title: "CyberDEX",

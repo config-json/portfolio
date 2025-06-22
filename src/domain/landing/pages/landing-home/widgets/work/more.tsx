@@ -1,5 +1,5 @@
-import { Work } from "@/data/work";
-import { cn } from "@/utils/cn";
+import { Work } from "./constants";
+import { cn } from "@/domain/core/utils/cn";
 import Image from "next/image";
 import { FC } from "react";
 

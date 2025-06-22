@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Button from "./Button";
+import { Button } from "@/components/button";
 
-export default function Nav() {
+export const Header = () => {
   return (
     <div className="flex justify-between items-center pt-6 px-9 w-full">
       <Link

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <div className="flex flex-col gap-4 px-6 pb-8 items-center">
       <h4 className="text-2xl font-bold">
