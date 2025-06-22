@@ -1,1 +1,1 @@
-export { Work } from './work';
+export { Work } from './work'

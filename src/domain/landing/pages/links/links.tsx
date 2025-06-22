@@ -1,21 +1,21 @@
-import Link from "next/link";
-import { Header } from "@/domain/core/components/header";
-import { Icon } from "@/domain/core/components/icon";
+import Link from 'next/link'
+import { Header } from '@/domain/core/components/header'
+import { Icon } from '@/domain/core/components/icon'
 
 const SOCIALS = [
   {
-    name: "Twitter",
+    name: 'Twitter',
     icon: <Icon.Twitter size={20} />,
-    link: "https://twitter.com/config_json",
-    tag: "@config_json",
+    link: 'https://twitter.com/config_json',
+    tag: '@config_json',
   },
   {
-    name: "GitHub",
+    name: 'GitHub',
     icon: <Icon.Github size={20} />,
-    link: "https://github.com/config-json",
-    tag: "@config-json",
+    link: 'https://github.com/config-json',
+    tag: '@config-json',
   },
-];
+]
 
 export const Links = () => {
   return (
@@ -34,9 +34,9 @@ export const Links = () => {
               {social.icon}
               <p>{social.tag}</p>
             </Link>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }

@@ -1,27 +1,27 @@
-"use client";
+'use client'
 
-import { Button } from "@/domain/core/components/button";
-import { cn } from "@/domain/core/utils/cn";
-import Image from "next/image";
-import Link from "next/link";
-import { FC, useState } from "react";
-import { More } from "./more";
-import { Work } from "./constants";
+import { Button } from '@/domain/core/components/button'
+import { cn } from '@/domain/core/utils/cn'
+import Image from 'next/image'
+import Link from 'next/link'
+import { FC, useState } from 'react'
+import { More } from './more'
+import { Work } from './constants'
 
 type WorkEntryProps = {
   work: Work
-  reverse: boolean;
-};
+  reverse: boolean
+}
 
 export const WorkEntry: FC<WorkEntryProps> = ({ work, reverse }) => {
-  const [isMore, setIsMore] = useState(false);
+  const [isMore, setIsMore] = useState(false)
 
   return (
     <div className="flex flex-col max-w-3xl">
       <div
         className={cn(
-          "flex flex-col w-full border-2",
-          reverse ? "sm:flex-row-reverse" : "sm:flex-row",
+          'flex flex-col w-full border-2',
+          reverse ? 'sm:flex-row-reverse' : 'sm:flex-row',
         )}
       >
         <Image
@@ -29,10 +29,10 @@ export const WorkEntry: FC<WorkEntryProps> = ({ work, reverse }) => {
           width={512}
           height={512}
           className={cn(
-            "border-white",
-            reverse ? "sm:border-l-2" : "sm:border-r-2",
-            "border-b-2 sm:border-b-0",
-            "w-full sm:max-w-fit h-full sm:h-[229px] lg:h-[205px]",
+            'border-white',
+            reverse ? 'sm:border-l-2' : 'sm:border-r-2',
+            'border-b-2 sm:border-b-0',
+            'w-full sm:max-w-fit h-full sm:h-[229px] lg:h-[205px]',
           )}
           alt={work.title}
         />
@@ -43,7 +43,7 @@ export const WorkEntry: FC<WorkEntryProps> = ({ work, reverse }) => {
           </div>
           <div className="flex gap-6">
             <Button
-              background={isMore ? "white" : "accent"}
+              background={isMore ? 'white' : 'accent'}
               onClick={() => setIsMore(!isMore)}
             >
               More
@@ -56,5 +56,5 @@ export const WorkEntry: FC<WorkEntryProps> = ({ work, reverse }) => {
       </div>
       {isMore && <More work={work} />}
     </div>
-  );
+  )
 }

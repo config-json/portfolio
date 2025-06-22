@@ -1,7 +1,7 @@
-import { Footer } from "@/domain/core/components/footer";
-import { Work } from "./widgets/work";
-import { Hero } from "./widgets/hero";
-import { About } from "./widgets/about";
+import { Footer } from '@/domain/core/components/footer'
+import { Work } from './widgets/work'
+import { Hero } from './widgets/hero'
+import { About } from './widgets/about'
 
 export const LandingHome = () => {
   return (
@@ -11,5 +11,5 @@ export const LandingHome = () => {
       <Work />
       <Footer />
     </div>
-  );
+  )
 }

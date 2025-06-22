@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export const Footer = () => {
   return (
@@ -7,9 +7,9 @@ export const Footer = () => {
         config<span className="text-accent">.json</span>
       </h4>
       <div className="flex gap-8">
-        <Link href={"/links"}>Links</Link>
-        <Link href={"/#work"}>Work</Link>
+        <Link href={'/links'}>Links</Link>
+        <Link href={'/#work'}>Work</Link>
       </div>
     </div>
-  );
+  )
 }

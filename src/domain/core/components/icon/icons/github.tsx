@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 export const Github: FC<{ size?: number }> = ({ size = 24 }) => {
   return (
@@ -51,5 +51,5 @@ export const Github: FC<{ size?: number }> = ({ size = 24 }) => {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 export const Twitter: FC<{ size?: number }> = ({ size = 24 }) => {
   return (
@@ -21,5 +21,5 @@ export const Twitter: FC<{ size?: number }> = ({ size = 24 }) => {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }

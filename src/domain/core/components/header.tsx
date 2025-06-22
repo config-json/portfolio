@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { Button } from "@/domain/core/components/button";
+import Link from 'next/link'
+import { Button } from '@/domain/core/components/button'
 
 export const Header = () => {
   return (
@@ -11,16 +11,13 @@ export const Header = () => {
         config<span className="text-accent">.json</span>
       </Link>
       <div className="text-sm md:text-base flex justify-end items-center gap-9 w-full">
-        <Link
-          href={"/links"}
-          className="hover:opacity-70 transition duration-300"
-        >
+        <Link href={'/links'} className="hover:opacity-70 transition duration-300">
           Links
         </Link>
-        <Link href={"/#work"}>
+        <Link href={'/#work'}>
           <Button background="stroke">Work</Button>
         </Link>
       </div>
     </div>
-  );
+  )
 }
