@@ -1,16 +1,15 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Work from "@/components/Work";
-import work from "@/data/work.json";
+import { WorkEntry } from "@/components/work-entry";
 import CustomTypewriter from "@/components/Typewriter";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import Image from "next/image";
 import useHash from "@/hooks/useHash";
+import { WORKS } from "@/data/work";
 
 export default function Home() {
-  const _works = work.map((item) => item.name);
 
   const hash = useHash();
   const workRef = useRef<HTMLDivElement>(null);
@@ -50,7 +49,7 @@ export default function Home() {
           <h3 className="text-2xl md:text-4xl font-medium text-accent">
             ABOUT
           </h3>
-          <p className="">
+          <p>
             “config.json” is a pro&shy;duct of bran&shy;ding
             cre&shy;a&shy;ti&shy;vi&shy;ty. It’s a sim&shy;ple and
             me&shy;mo&shy;rable name, yet com&shy;plex at its core. The
@@ -62,8 +61,8 @@ export default function Home() {
         <h2 ref={workRef} className="text-purple text-6xl font-semibold">
           Work
         </h2>
-        {_works.map((item, index) => (
-          <Work key={index} reverse={index % 2 !== 0} name={item} />
+        {WORKS.map((work, index) => (
+          <WorkEntry key={index} reverse={index % 2 !== 0} work={work} />
         ))}
       </div>
       <Footer />

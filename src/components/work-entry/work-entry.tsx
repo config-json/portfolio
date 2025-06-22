@@ -1,27 +1,20 @@
 "use client";
 
 import Button from "@/components/Button";
-import cn from "@/utils/cn";
+import { cn } from "@/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import More from "./More";
-import work from "@/data/work.json";
+import { FC, useState } from "react";
+import { More } from "./more";
+import { Work } from "@/data/work";
 
-type Props = {
-  name: string;
+type WorkProps = {
+  work: Work
   reverse: boolean;
 };
 
-export default function Work({ reverse, name }: Props) {
+export const WorkEntry: FC<WorkProps> = ({ work, reverse }) => {
   const [isMore, setIsMore] = useState(false);
-  const _work = work.find((item) => item.name === name);
-
-  if (!_work) {
-    return;
-  }
-
-  const { title, description, website } = _work;
 
   return (
     <div className="flex flex-col max-w-3xl">
@@ -32,19 +25,21 @@ export default function Work({ reverse, name }: Props) {
         )}
       >
         <Image
-          src={`/${name}.png`}
-          width={1024}
-          height={1024}
+          src={`/logos/${work.name}.png`}
+          width={512}
+          height={512}
           className={cn(
+            "border-white",
             reverse ? "sm:border-l-2" : "sm:border-r-2",
-            "h-full w-full sm:h-[229px] lg:h-[205px] max-w-fit",
+            "border-b-2 sm:border-b-0",
+            "w-full sm:max-w-fit h-full sm:h-[229px] lg:h-[205px]",
           )}
-          alt={title}
+          alt={work.title}
         />
         <div className="flex flex-col gap-6 p-6">
           <div className="flex flex-col gap-2">
-            <h4 className="text-2xl">{title}</h4>
-            <p>{description}</p>
+            <h4 className="text-2xl">{work.title}</h4>
+            <p>{work.description}</p>
           </div>
           <div className="flex gap-6">
             <Button
@@ -53,13 +48,13 @@ export default function Work({ reverse, name }: Props) {
             >
               More
             </Button>
-            <Link href={website} target="_blank">
+            <Link href={work.website} target="_blank">
               <Button background="stroke">Website</Button>
             </Link>
           </div>
         </div>
       </div>
-      {isMore && <More name={name} />}
+      {isMore && <More work={work} />}
     </div>
   );
 }
