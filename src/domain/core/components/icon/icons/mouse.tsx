@@ -1,10 +1,11 @@
+import { FC } from "react"
 
-export const Mouse = () => {
+export const Mouse: FC<{ size?: number }> = ({ size = 24 }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="24"
+            width={size}
+            height={size}
             viewBox="0 0 25 24"
             fill="none"
         >

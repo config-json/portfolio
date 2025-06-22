@@ -5,13 +5,13 @@ import { Icon } from "@/domain/core/components/icon";
 const SOCIALS = [
   {
     name: "Twitter",
-    icon: <Icon.Twitter />,
+    icon: <Icon.Twitter size={20} />,
     link: "https://twitter.com/config_json",
     tag: "@config_json",
   },
   {
     name: "GitHub",
-    icon: <Icon.Github />,
+    icon: <Icon.Github size={20} />,
     link: "https://github.com/config-json",
     tag: "@config-json",
   },

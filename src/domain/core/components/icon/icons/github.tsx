@@ -1,9 +1,11 @@
-export const Github = () => {
+import { FC } from "react";
+
+export const Github: FC<{ size?: number }> = ({ size = 24 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
+      width={size}
+      height={size}
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -45,7 +47,7 @@ export const Github = () => {
       </g>
       <defs>
         <clipPath id="clip0_1217_4">
-          <rect width="20" height="20" fill="currentColor" />
+          <rect width={size} height={size} fill="currentColor" />
         </clipPath>
       </defs>
     </svg>

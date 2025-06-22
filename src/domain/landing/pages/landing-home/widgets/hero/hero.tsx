@@ -22,7 +22,7 @@ export const Hero = () => {
             </div>
             <div className="w-full flex gap-3 pb-6 justify-center">
                 <p>Scroll</p>
-                <Icon.Mouse />
+                <Icon.Mouse size={24}/>
                 <p>Down</p>
             </div>
         </div>
