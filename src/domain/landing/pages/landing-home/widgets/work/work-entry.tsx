@@ -48,9 +48,16 @@ export const WorkEntry: FC<WorkEntryProps> = ({ work, reverse }) => {
             >
               More
             </Button>
-            <Link href={work.website} target="_blank">
-              <Button background="stroke">Website</Button>
-            </Link>
+            {work.website && (
+              <Link href={work.website} target="_blank">
+                <Button background="stroke">Website</Button>
+              </Link>
+            )}
+            {work.code && (
+              <Link href={work.code} target="_blank">
+                <Button background="stroke">Code</Button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
