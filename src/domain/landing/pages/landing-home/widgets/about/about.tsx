@@ -4,9 +4,11 @@ export const About = () => {
       <div className="flex flex-col gap-2 w-full lg:w-1/2 max-w-3xl items-center">
         <h3 className="text-2xl md:text-4xl font-medium text-accent">ABOUT</h3>
         <p>
-          “config.json” is a pro&shy;duct of bran&shy;ding cre&shy;a&shy;ti&shy;vi&shy;ty.
-          It’s a sim&shy;ple and me&shy;mo&shy;rable name, yet com&shy;plex at its core.
-          The pie&shy;ces on this port&shy;fo&shy;lio aren’t any different.
+          Insert text about being a developer with x+ years of experience and having a
+          "passion" for building React apps.
+          <br />
+          <br />
+          Yours sincerely - a file on the internet
         </p>
       </div>
     </div>
