@@ -5,7 +5,7 @@ import { About } from '../../widgets/about'
 
 export const LandingHome = () => {
   return (
-    <div className="max-w-screen flex flex-col gap-24 scrollbar-none">
+    <div className="max-w-screen flex flex-col gap-24">
       <Hero />
       <About />
       <Work />

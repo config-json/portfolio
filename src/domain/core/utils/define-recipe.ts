@@ -14,6 +14,8 @@ type RecipeVariantsArray<T extends Recipe> = [
   Record<string, string>,
 ][]
 
+export type RecipeProps<T extends (...args: any[]) => string> = Parameters<T>[0]
+
 export const defineRecipe = <T extends Recipe>(recipe: T) => {
   return (props: DefineRecipeProps<T>) => {
     const variants = Object.entries(recipe.variants) as RecipeVariantsArray<T>
@@ -26,5 +28,3 @@ export const defineRecipe = <T extends Recipe>(recipe: T) => {
     return cn(recipe.base, ...classNames)
   }
 }
-
-export type RecipeProps<T extends (...args: any[]) => string> = Parameters<T>[0]
