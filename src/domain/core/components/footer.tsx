@@ -1,4 +1,6 @@
+import { HashedRoutes, makeHashedRoute, routes } from '@/domain/landing/utils/route'
 import Link from 'next/link'
+import { renderPath } from 'typesafe-routes'
 
 export const Footer = () => {
   return (
@@ -7,8 +9,8 @@ export const Footer = () => {
         config<span className="text-accent">.json</span>
       </h4>
       <div className="flex gap-8">
-        <Link href={'/links'}>Links</Link>
-        <Link href={'/#work'}>Work</Link>
+        <Link href={renderPath(routes().links, {})}>Links</Link>
+        <Link href={makeHashedRoute(HashedRoutes.Work)}>Work</Link>
       </div>
     </div>
   )
