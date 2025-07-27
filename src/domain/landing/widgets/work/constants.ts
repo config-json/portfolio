@@ -2,12 +2,25 @@ export type Work = {
   name: string
   title: string
   description: string
-  website: string
+  website?: string
+  code?: string
   tags: string[]
   text: string[]
 }
 
 export const WORKS: Work[] = [
+  {
+    name: 'solana-mirror',
+    title: 'Solana Mirror',
+    description: 'Retrieve current and historical data for your Solana wallet',
+    code: 'https://github.com/solana-mirror',
+    tags: ['Rust', 'Docker'],
+    text: [
+      'Developed a Rust crate that gets current and historical (dollar) balances of a Solana wallet',
+      'Rebuilt a portion of Solana’s JSON-RPC client to support batching requests and HTTP client reuse',
+      'Built a pipeline to deploy the service in a Docker container on an AWS Lightsail instance',
+    ],
+  },
   {
     name: 'cyberdex',
     title: 'CyberDEX',
@@ -31,13 +44,5 @@ export const WORKS: Work[] = [
       'Designed a chatting interface to allow sending and receiving crypto',
       'Used the Push SDK to enable communication between wallet addresses',
     ],
-  },
-  {
-    name: 'mktsuite',
-    title: 'MktSuite',
-    description: 'A developing range of everyday tools for traders across all markets',
-    website: 'https://mktclock.com',
-    tags: ['Brand Design', 'UI/UX', 'TailwindCSS', 'React'],
-    text: ['Built a simple app that displays the status of major financial markets'],
   },
 ]

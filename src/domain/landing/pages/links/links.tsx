@@ -1,19 +1,18 @@
 import Link from 'next/link'
 import { Header } from '@/domain/core/components/header'
 import { Icon } from '@/domain/core/components/icon'
+import { makeGithubLink, makeTwitterLink } from '../../utils/routes'
 
 const SOCIALS = [
   {
-    name: 'Twitter',
     icon: <Icon.Twitter size={20} />,
-    link: 'https://twitter.com/config_json',
-    tag: '@config_json',
+    tag: 'config_json',
+    makeLink: makeTwitterLink,
   },
   {
-    name: 'GitHub',
     icon: <Icon.Github size={20} />,
-    link: 'https://github.com/config-json',
-    tag: '@config-json',
+    tag: 'config-json',
+    makeLink: makeGithubLink,
   },
 ]
 
@@ -27,12 +26,12 @@ export const Links = () => {
           return (
             <Link
               key={index}
-              href={social.link}
+              href={social.makeLink(social.tag)}
               target="_blank"
               className="w-full max-w-lg flex gap-4 justify-center border-2 rounded-md px-6 py-3 fill-white hover:fill-background hover:text-background hover:bg-white transition duration-300"
             >
               {social.icon}
-              <p>{social.tag}</p>
+              <p>@{social.tag}</p>
             </Link>
           )
         })}

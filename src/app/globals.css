@@ -9,6 +9,10 @@
   --color-green: #bcd78f;
 }
 
+html {
+  scrollbar-width: none;
+}
+
 body {
   color: var(--color-white);
   background: var(--color-background);
