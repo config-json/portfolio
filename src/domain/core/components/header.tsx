@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/domain/core/components/button'
-import { HashedRoutes, makeHashedRoute, routes } from '@/domain/landing/utils/route'
+import { HashedRoutes, makeHashedRoute, routes } from '@/domain/landing/utils/routes'
 import { renderPath } from 'typesafe-routes'
 
 export const Header = () => {

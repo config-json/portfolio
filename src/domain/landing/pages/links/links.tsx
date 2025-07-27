@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Header } from '@/domain/core/components/header'
 import { Icon } from '@/domain/core/components/icon'
-import { makeGithubLink, makeTwitterLink } from '../../utils/route'
+import { makeGithubLink, makeTwitterLink } from '../../utils/routes'
 
 const SOCIALS = [
   {

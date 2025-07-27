@@ -1,6 +1,6 @@
 import { WorkEntry } from './work-entry'
 import { WORKS } from './constants'
-import { HashedRoutes } from '../../utils/route'
+import { HashedRoutes } from '../../utils/routes'
 
 export const Work = () => {
   return (
