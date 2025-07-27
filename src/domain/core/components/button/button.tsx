@@ -1,14 +1,19 @@
-import { FC, PropsWithChildren } from 'react'
+import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react'
 import { buttonRecipe, ButtonVariantProps } from './button-recipe'
+import { cn } from '../../utils/cn'
 
 type ButtonProps = ButtonVariantProps &
-  PropsWithChildren & {
-    onClick?: () => void
-  }
+  PropsWithChildren &
+  ButtonHTMLAttributes<HTMLButtonElement>
 
-export const Button: FC<ButtonProps> = ({ children, onClick, background }) => {
+export const Button: FC<ButtonProps> = ({
+  children,
+  background,
+  className,
+  ...restProps
+}) => {
   return (
-    <button onClick={onClick} className={buttonRecipe({ background })}>
+    <button className={cn(className, buttonRecipe({ background }))} {...restProps}>
       {children}
     </button>
   )
